@@ -1,0 +1,22 @@
+h1{
+    font-weight: 400;
+    font-size:  40px;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 100%;
+}
+
+.item-container{
+    text-align:left;
+}
+
+.custom-botton{
+    min-width: 80px;
+}
+
+.custom-row{
+    margin: 10px 5px;
+}
