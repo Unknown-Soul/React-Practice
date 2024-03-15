@@ -5,8 +5,8 @@ function App() {
   return (
     <>
       <h1>Healthy Foods</h1>
-      <ul class="list-group">
-        {foodIteams.map(item=> <li class="list-group-item">{item}</li>)}
+      <ul className="list-group">
+        {foodIteams.map(item=> <li key={item} className="list-group-item">{item}</li>)}
       </ul>
     </>
   )
