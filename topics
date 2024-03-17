@@ -7,7 +7,7 @@ Key Props -  provide unique key to optimize rendering
 Conditional Rendering
 Passing Data via Props
 Css Modules - localised classNames to avoid gloabal nameConflict - name Convention of file {sameNameAsJsxFile}.module.css . cass module add unique name infoent of our class name at time of comilation
-
+Passing Children
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
