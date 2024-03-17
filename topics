@@ -9,6 +9,7 @@ Passing Data via Props
 Css Modules - localised classNames to avoid gloabal nameConflict - name Convention of file {sameNameAsJsxFile}.module.css . cass module add unique name infoent of our class name at time of comilation
 Passing Children - children is by default argument that passed on to children
 EventHandling -  uses CamelCase like onClick.
+6-child-to-parent-communication-passing-function-via-prop
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
