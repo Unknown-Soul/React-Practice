@@ -11,7 +11,9 @@ Passing Children - children is by default argument that passed on to children
 EventHandling -  uses CamelCase like onClick.
 6-child-to-parent-communication-passing-function-via-prop
 State-Management - State represent data that changes overtime. It changes bcz component re-render. Its local and private to a component
-                 - useStateHook
+                 - useStateHook - repaint whole component
+                 - deconstruct object = {}
+                 - deconstruct array  = []
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
