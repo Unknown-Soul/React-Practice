@@ -2,30 +2,33 @@ import AppName from './components/AppName.'
 import AddTodo from './components/AddTodo'
 import "./App.css";
 import TodoIteams from './components/TodoIteams';
+import { useState } from 'react';
+import WelcomeMessage from './components/WelcomeMessage';
 
 function App() {
 
-  const TodoIteamList = [
-    {
-      itemName: "Buy Milk",
-      date: "04/02/2024",
-    },
-    {
-      itemName: "Go To College",
-      date: "04/02/2024",
-    }
-  ]
+  const [todoItemList, setTodoIteamList] = useState([
+ 
+  ]);
+
+  function onAddTodoIteam(item, date) {
+    setTodoIteamList([...todoItemList, {
+      itemName: item,
+      date: date,
+    }]);
+  };
+
+
   return (
-
     <center className='todoAppContainer'>
-        <AppName/>
-        <div className='item-container'>
-          <AddTodo ></AddTodo>  
-          <TodoIteams todo={TodoIteamList}></TodoIteams>
-        </div>
-      </center>
-
-  )
+      <AppName />
+      <div className='item-container'>
+        <AddTodo onAddTodoIteam={onAddTodoIteam}></AddTodo>
+        {todoItemList.length <=0 && <WelcomeMessage></WelcomeMessage>}
+        <TodoIteams todo={todoItemList} />
+      </div>
+    </center>
+  );
 }
 
 export default App
