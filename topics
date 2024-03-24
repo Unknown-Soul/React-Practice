@@ -20,6 +20,10 @@ State-Management - State represent data that changes overtime. It changes bcz co
 State and Props :  State is local and mutable, intit inside component, can change overtime and cause re-render, manage using useState in functional components.
                    props passed into component from parent, immutable,allow paren - to -child component
 child-to-parent-communication : happens using event. function passed by parents to child
+react-icons
+reac-developer-tool
+react-form
+2 way binding (input update state and state update input) 8:07
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
