@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./AddTodo.module.css"
+import { IoIosAdd } from "react-icons/io";
 
 function AddTodo({ onAddTodoIteam }) {
     const [task, setTask] = useState("");
@@ -25,7 +26,7 @@ function AddTodo({ onAddTodoIteam }) {
             <div className="col-4">
                 <input type="date" name="datePicker" id="date" value={date} onChange={onDateChange} />       </div>
             <div className="col-2">
-                <button type='button' onClick={handleAddTodo} className={`btn btn-success ${styles.customButton}`}>Add</button>      </div>
+                <button type='button' onClick={handleAddTodo} className={`btn btn-success ${styles.customButton}`}><IoIosAdd /></button>      </div>
         </div>
     </div>
         ;
