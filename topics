@@ -14,6 +14,12 @@ State-Management - State represent data that changes overtime. It changes bcz co
                  - useStateHook - repaint whole component
                  - deconstruct object = {}
                  - deconstruct array  = []
+                 - hooks can only be used insite component
+                 - state change cuase component rerender
+                 - for functional components use useStateHook
+State and Props :  State is local and mutable, intit inside component, can change overtime and cause re-render, manage using useState in functional components.
+                   props passed into component from parent, immutable,allow paren - to -child component
+child-to-parent-communication : happens using event. function passed by parents to child
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}

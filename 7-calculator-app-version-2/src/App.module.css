@@ -1,0 +1,14 @@
+.calContainer{
+    border: 1px solid;
+    border-color: black;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.inputContainer{
+    width: 175px;
+    margin: 10px;
+    font-size: 25px;
+    border: 1px solid;
+}
+
