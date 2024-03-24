@@ -1,33 +1,27 @@
-import { useState } from "react";
+import { useRef } from "react";
 import styles from "./AddTodo.module.css"
 import { IoIosAdd } from "react-icons/io";
 
 function AddTodo({ onAddTodoIteam }) {
-    const [task, setTask] = useState("");
-    const [date, setDate] = useState("");
-
-    const onTaskChange = (event) => {
-        setTask(event.target.value);
-    }
-
-    const onDateChange = (event) => {
-        setDate(event.target.value);
-    }
+    const task = useRef();
+    const date = useRef();
 
     const handleAddTodo = (event) => {
         event.preventDefault();
-        onAddTodoIteam(task, date);
-        setTask("");
-        setDate("");
+        const taskTemp = task.current.value;
+        const dateTemp =  date.current.value
+        onAddTodoIteam(taskTemp,dateTemp);
+        task.current.value = "";
+        date.current.value = "";
     };
     return <div className="container">
         <form className={`row ${styles.customRow}`}
             onSubmit={handleAddTodo}
         >
             <div className="col-6">
-                <input type="text" placeholder='Enter Todo' value={task} onChange={onTaskChange} /></div>
+                <input type="text" placeholder='Enter Todo'  ref={task}/></div>
             <div className="col-4">
-                <input type="date" name="datePicker" id="date" value={date} onChange={onDateChange} />       </div>
+                <input type="date" name="datePicker" id="date" ref={date}/></div>
             <div className="col-2">
                 <button type='submit' className={`btn btn-success ${styles.customButton}`}><IoIosAdd /></button>      </div>
         </form>
