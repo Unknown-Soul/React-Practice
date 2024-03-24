@@ -18,6 +18,12 @@ function App() {
     }]);
   };
 
+  function onDeleteTodoIteam(itemNameToDelete) {
+    setTodoIteamList(prevTodoItemList => 
+      prevTodoItemList.filter(item => item.itemName !== itemNameToDelete)
+    );
+  }
+  
 
   return (
     <center className='todoAppContainer'>
@@ -25,7 +31,7 @@ function App() {
       <div className='item-container'>
         <AddTodo onAddTodoIteam={onAddTodoIteam}></AddTodo>
         {todoItemList.length <=0 && <WelcomeMessage></WelcomeMessage>}
-        <TodoIteams todo={todoItemList} />
+        <TodoIteams todo={todoItemList} onDeleteTodoIteam = {onDeleteTodoIteam}/>
       </div>
     </center>
   );
