@@ -24,6 +24,11 @@ react-icons
 reac-developer-tool
 react-form
 2 way binding (input update state and state update input) 8:07
+Use Ref -  Hook to access dom element and retain mutable value without re-render
+ 
+Hooks-
+useState
+useRef - can store value temp but may not necessarly repaint the component.Retain mutable value without re-render
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
