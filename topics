@@ -29,6 +29,8 @@ Use Ref -  Hook to access dom element and retain mutable value without re-render
 Hooks-
 useState
 useRef - can store value temp but may not necessarly repaint the component.Retain mutable value without re-render
+spread Operator and functional spread operator
+Context API - states wich shared among many component we save state in seprate file called context file. context api solve issue of  prop drilling
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
