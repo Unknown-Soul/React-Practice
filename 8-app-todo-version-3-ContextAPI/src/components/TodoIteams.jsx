@@ -1,13 +1,17 @@
+import { useContext } from "react";
 import TodoIteam1 from "./TodoIteam1";
+import { TodoItemsContext } from "../store/todo-iteam-store";
 
-const TodoIteams = ({ todo , onDeleteTodoIteam}) => {
+const TodoIteams = () => {
+    const contextObj = useContext(TodoItemsContext);
+    const todo = contextObj.items;
+
     return (
         <>
             {todo.map((item, index) => (
                 <TodoIteam1
-                    key={index} 
+                    key={index}
                     itemName={item.itemName}
-                    onDeleteTodoIteam = {onDeleteTodoIteam}
                     date={item.date}
                 />
             ))}
