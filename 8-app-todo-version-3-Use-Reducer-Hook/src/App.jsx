@@ -2,7 +2,7 @@ import AppName from './components/AppName.'
 import AddTodo from './components/AddTodo'
 import "./App.css";
 import TodoIteams from './components/TodoIteams';
-import { useReducer, useState } from 'react';
+import { useReducer } from 'react';
 import WelcomeMessage from './components/WelcomeMessage';
 import { TodoItemsContext } from './store/todo-iteam-store';
 
@@ -45,7 +45,7 @@ function App() {
       }
     };
     dispatchTodoIteams(newItemAction);
-  }
+  };
 
   return (
     <TodoItemsContext.Provider value={{
