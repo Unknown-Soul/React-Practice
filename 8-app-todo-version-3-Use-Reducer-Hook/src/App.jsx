@@ -2,23 +2,49 @@ import AppName from './components/AppName.'
 import AddTodo from './components/AddTodo'
 import "./App.css";
 import TodoIteams from './components/TodoIteams';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import WelcomeMessage from './components/WelcomeMessage';
 import { TodoItemsContext } from './store/todo-iteam-store';
+
+const TodoIteamsReducer = (currentStateOfTodo, action) => {
+  let newTodoItems = currentStateOfTodo;
+  if (action.type === "ADD_NEW_ITEAM") {
+    newTodoItems = [
+      ...currentStateOfTodo,
+      {
+        itemName: action.payload.itemName,
+        date: action.payload.date,
+      },
+    ];
+  } else if (action.type === "DELETE_ITEAM") {
+    newTodoItems = currentStateOfTodo.filter((item) => item.itemName !== action.payload.itemName)
+  }
+  return newTodoItems;
+}
+
 function App() {
-  const [todoItemList, setTodoIteamList] = useState([]);
+  const [todoItemList, dispatchTodoIteams] = useReducer(TodoIteamsReducer, []);
 
   function onAddTodoIteam(item, date) {
-    setTodoIteamList([...todoItemList, {
-      itemName: item,
-      date: date,
-    }]);
+    const newItemAction = {
+      type: "ADD_NEW_ITEAM",
+      payload: {
+        itemName: item,
+        date: date,
+      }
+    }
+    dispatchTodoIteams(newItemAction);
   };
 
+
   function onDeleteTodoIteam(itemNameToDelete) {
-    setTodoIteamList(prevTodoItemList =>
-      prevTodoItemList.filter(item => item.itemName !== itemNameToDelete)
-    );
+    const newItemAction = {
+      type: "DELETE_ITEAM",
+      payload: {
+        itemName: item,
+      }
+    };
+    dispatchTodoIteams(newItemAction);
   }
 
   return (
@@ -33,7 +59,7 @@ function App() {
         <div className='item-container'>
           <AddTodo></AddTodo>
           <WelcomeMessage></WelcomeMessage>
-          <TodoIteams/>
+          <TodoIteams />
         </div>
       </center>
     </TodoItemsContext.Provider>

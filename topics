@@ -32,7 +32,7 @@ useRef - can store value temp but may not necessarly repaint the component.Retai
 spread Operator and functional spread operator
 Context API - states wich shared among many component we save state in seprate file called context file. context api solve issue of  prop drilling
 we use context only in very limited manner as whenver context changes its repaint whole app :Note
-USe Reducer - complex State -  kind of hook - 2 components -seprate the action and stateManagement. we create seprate state management function 
+USe Reducer - complex State -  kind of hook - 2 components -seprate the action and stateManagement. app not consider about statemanagement
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
