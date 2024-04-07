@@ -12,10 +12,10 @@ function App() {
 
   return (
     <div className="app-continer">
-      <SideBar selectedTab={selectedTab}></SideBar>
+      <SideBar selectedTab={selectedTab} setSelectedTab={setSelectedTab}></SideBar>
       <div className="content">
         <Header></Header>
-        {selectedTab === "Home" ? (
+        {(selectedTab === "Home")  ? (
           <PostList></PostList>
         ) : (
           <CreatePost></CreatePost>
