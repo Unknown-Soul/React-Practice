@@ -1,7 +1,20 @@
-.app-continer{
+.app-continer {
   display: flex;
 }
 
-.content{
+.content {
   width: 100%;
+}
+
+.post-card {
+  margin: 1rem;
+}
+
+.hashTag{
+  margin: 0px 0px 3px 3px;
+}
+
+.reaction{
+  margin: 2px;
+  padding: 1px;
 }
