@@ -6,6 +6,7 @@ export const TodoItemsContext = createContext({
     deleteIteams: () => { },
 });
 
+// Reducer hook
 const TodoIteamsReducer = (currentStateOfTodo, action) => {
     let newTodoItems = currentStateOfTodo;
     if (action.type === "ADD_NEW_ITEAM") {
@@ -25,6 +26,7 @@ const TodoIteamsReducer = (currentStateOfTodo, action) => {
 
 // component
 const TodoIteamContextProvider = ({ children }) => {
+    //  take input a pureFuction and inital value
     const [todoItemList, dispatchTodoIteams] = useReducer(TodoIteamsReducer, []);
 
     function onAddTodoIteam(item, date) {
