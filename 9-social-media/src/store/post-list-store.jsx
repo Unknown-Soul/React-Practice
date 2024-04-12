@@ -12,6 +12,7 @@ const postlIstReducer = (currentPost, action) => {
     let newPostList = currentPost;
     if (action.type === "DELETE_POST") {
         newPostList = currentPost.filter(post => post.id !== action.payload.postId);
+
     }
     return newPostList;
 }
