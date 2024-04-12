@@ -14,13 +14,28 @@ const postlIstReducer = (currentPost, action) => {
         newPostList = currentPost.filter(post => post.id !== action.payload.postId);
 
     }
+    if (action.type === "ADD_POST") {
+        newPostList = [action.payload,...currentPost]
+
+    }
     return newPostList;
 }
 
 const PostListProvider = ({ children }) => {
     const [postList, dispatchPostList] = useReducer(postlIstReducer, DEFAULT_POST_LIST);
-    const addPost = () => {
-
+    const addPost = (userId,title,body,reaction,tags) => {
+        console.log("in stote" + userId);
+        dispatchPostList({
+            type: "ADD_POST",
+            payload : {
+                id: Date.now,
+                title: title,
+                body: body,
+                reaction: reaction,
+                hashTag: tags,
+                userId: userId
+            }
+        })
     };
 
     const deletePost = (postId) => {
