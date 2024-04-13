@@ -37,7 +37,9 @@ USe Reducer - complex State -  kind of hook - 2 components -seprate the action a
 user Reducer is a Hook to help us manage complex logic  -  2 component  Reduer and action
 intigrating API
 Fetch, Promise
-useEffect Hook
+useEffect Hook - handle effects like event listner and data fetching
+               - run after every render
+               - we pass 2 paramter one action second is dependecny on chnage of which action take place or dependecy is empty
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
