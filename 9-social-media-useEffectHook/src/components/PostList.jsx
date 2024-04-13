@@ -12,12 +12,19 @@ const PostList = () => {
 
     useEffect(() => {
         setFetching(true);
-        fetch('https://dummyjson.com/posts')
+        const controller = new AbortController();
+        const signal = controller.signal;
+        fetch('https://dummyjson.com/posts', { signal })
             .then(res => res.json())
             .then((data) => {
                 addInitialPost(data.posts)
                 setFetching(false);
             });
+
+        return () => {
+            controller.abort(); // if we change page in between network call we abord that call
+            console.log("Cleaning Log Effect");
+        }
     }, []);
 
     return <>
