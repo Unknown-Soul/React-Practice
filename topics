@@ -35,6 +35,9 @@ we use context only in very limited manner as whenver context changes its repain
 Context Hook =  hook to use to use data stored in context API
 USe Reducer - complex State -  kind of hook - 2 components -seprate the action and stateManagement. app not consider about statemanagemen
 user Reducer is a Hook to help us manage complex logic  -  2 component  Reduer and action
+intigrating API
+Fetch, Promise
+useEffect Hook
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
