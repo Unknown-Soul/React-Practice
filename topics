@@ -48,6 +48,7 @@ use Custom Hook
 --------------------------------------
 fetching data from server
 routers- npm install react-router-dom
+router-link = use to at place href and at place of <a> use <Link>
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
