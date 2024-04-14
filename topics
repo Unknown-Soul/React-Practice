@@ -40,6 +40,13 @@ Fetch, Promise
 useEffect Hook - handle effects like event listner and data fetching
                - run after every render
                - we pass 2 paramter one action second is dependecny on chnage of which action take place or dependecy is empty
+
+--------------Very Advance TOPICS--------
+useCallBack Hook
+useMemo Hook 
+use Custom Hook
+--------------------------------------
+routers
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
