@@ -30,6 +30,7 @@ const postlIstReducer = (currentPost, action) => {
 const PostListProvider = ({ children }) => {
     const [postList, dispatchPostList] = useReducer(postlIstReducer, DEFAULT_POST_LIST);
     const [fetching, setFetching] = useState(false);
+    
 
     const addPost = (post) => {
         dispatchPostList({
