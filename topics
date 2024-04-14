@@ -46,7 +46,8 @@ useCallBack Hook
 useMemo Hook 
 use Custom Hook
 --------------------------------------
-routers
+fetching data from server
+routers- npm install react-router-dom
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
