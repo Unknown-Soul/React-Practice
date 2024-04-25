@@ -117,3 +117,5 @@ any action on UI need to be in form of dispatch a Action that pass 2 values of r
 ----Node--
 npm init -y
 npm install redux
+npm install redux
+npm install react-redux
