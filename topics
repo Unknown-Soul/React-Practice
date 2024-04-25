@@ -53,6 +53,22 @@ use Navigate =  hook to automatically redirect or navigate
 fetching and submitting data using react router
 fetching data using router through loader
 submmit data using router through action
+---------------Redux-------------------
+Local Component State - useState, ReducerState
+Cross Component State - useState with propDrilling
+App Wide State - can be used for authantication, theme, userInformation, 
+Redux - use to maintin App Wide State
+Why use Redux over react context +  hooks
+Setup and Coding is tought especially is we have multiple context providers
+perfromnace is slow, context should only be used for this that rarely changed
+
+How Redux Works
+Single source : use single central store to maintain entire state
+Actions :  comopnent never directly changes , Changes through dispatch actions, which 
+           descive event.
+Reducers: Actions are processed by reducers pure funtion tjam return new state
+Immutable : every change return new state
+different from useReducer
 --------------
 00:00 Introduction
 02:30 Ch-1-6: Introduction { React and Components}
@@ -84,3 +100,20 @@ submmit data using router through action
 
 what are block element
 what is flex
+
+---Redux--
+stateManagement  for cross component and app-wide 
+app-wide statement -  theme, autantication etc. we can use useContext or useSSTate with propDrilling 
+Redux is optimization of app-wide statemangement
+Redux is centeral store
+perfromance is slow react-context and complexity increase with project for react-context. Context should only be used where our state changes less freequently
+Redux store all the states in key value pair in centeral object from store.
+any UI that need to use the state must subscribe to the store and any changes in the object will be notified to the UI
+any action on UI need to be in form of dispatch a Action that pass 2 values of reducer one current and one new 
+
+![alt text](image.png)
+
+
+----Node--
+npm init -y
+npm install redux
