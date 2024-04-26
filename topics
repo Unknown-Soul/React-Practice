@@ -112,6 +112,7 @@ any UI that need to use the state must subscribe to the store and any changes in
 any action on UI need to be in form of dispatch a Action that pass 2 values of reducer one current and one new 
 
 ![alt text](image.png)
+useSelector: Hook
 
 
 ----Node--
