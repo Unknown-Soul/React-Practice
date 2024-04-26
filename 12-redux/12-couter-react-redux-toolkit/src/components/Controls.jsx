@@ -1,26 +1,28 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
+import { add, decrement, increment, subtract } from "../store";
 
 const Controls = () => {
 
     const inputElement = useRef();
     const dispatch = useDispatch();
     const handleDecrement = () => {
-        dispatch({ type: "DECREMENT" });
+        dispatch(decrement());
     }
 
     const handleIncreamnt = () => {
-        dispatch({ type: "INCREMENT" });
+        dispatch(increment());
+
     }
 
 
     const handleAdd = () => {
-        dispatch({ type: "ADD", payload: { num: inputElement.current.value } });
+        dispatch(add({ num: inputElement.current.value }));
         inputElement.current.value = "";
     }
 
     const handleSubtract = () => {
-        dispatch({ type: "SUBTRACT", payload: { num: inputElement.current.value } });
+        dispatch(subtract({ num: inputElement.current.value }));
         inputElement.current.value = "";
     }
 

@@ -114,6 +114,7 @@ any action on UI need to be in form of dispatch a Action that pass 2 values of r
 ![alt text](image.png)
 useSelector: Hook
 Redux-Toolkit: help in create small package by reducer and combine them later 
+slice
 
 ----Node--
 npm init -y
