@@ -121,3 +121,8 @@ npm init -y
 npm install redux
 npm install redux
 npm install react-redux
+
+---- myntra prohect -- 
+copies. html and css from old project
+install npm react, redux,icon,boostrap packages
+install router - npm install react-router-dom
