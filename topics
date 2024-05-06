@@ -127,3 +127,4 @@ copies. html and css from old project
 install npm react, redux,icon,boostrap packages
 install router - npm install react-router-dom
 <Outlet> is added where we need our actual content to load execept header, ffoter
+headless component FetchItem
