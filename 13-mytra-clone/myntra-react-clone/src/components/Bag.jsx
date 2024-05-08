@@ -1,19 +1,20 @@
 import BagItem from "./BagItem";
 import BagSummary from "./BagSummary";
+import { useSelector } from "react-redux";
 
 function Bag() {
-    const item = {
-        company: "ax",
-        current_price: 12,
-        original_price: 123,
-        discount_percentage: 12344,
-        return_period: 123,
-        delivery_date: 12
-    }
+    const bag = useSelector(state => state.bag);
+    const items = useSelector(state => state.items);
+    const finalItems = items.filter(item => {
+        const itemIndex = bag.indexOf(item.id);
+        return itemIndex >= 0;
+    })
     return <>
         <main>
             <div className="bag-page">
-                <BagItem item={item} />
+                <div className="bag-items-container">
+                    {finalItems.map(item => <BagItem item={item} />)}
+                </div>
                 <BagSummary />
             </div>
         </main>
